@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 
-function AccordionItem({title, text, num}) {
-   const [isOpen, setisOpen]=useState(false)
+function AccordionItem({title, text, num, setisOpen, curOpen}) {
+    const  isOpen = num===curOpen
    function hnadleTogle(){
-    setisOpen(!isOpen)
+    setisOpen(isOpen?null:num)
    }
   return (
     <div className={`item ${isOpen? 'open':''}`} onClick={hnadleTogle}>
