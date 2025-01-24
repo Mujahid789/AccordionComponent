@@ -22,8 +22,10 @@ function App() {
 
   return (
     <>
+    
+    <div>
     <Accordion data={faqs}/>
-    <div>App</div>
+    </div>
     </>
   )
 }

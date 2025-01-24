@@ -1,9 +1,12 @@
-import React from 'react'
+
+import AccordionItem from './AccordionItem' 
 
 function Accordion({data}) {
-    console.log("data======",data)
   return (
-    <div>Accordion</div>
+    <div className='accordion'>
+        {data.map((item, i) => ( <AccordionItem num={i} title={item.title} text={item.text}/>))}
+       
+    </div>
   )
 }
 
